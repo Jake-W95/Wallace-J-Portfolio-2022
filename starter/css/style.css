@@ -1,0 +1,150 @@
+:root{
+  --primary_color: #b1cdff;
+  --secondary_color: #8b99ff;
+  --highlight: #0000008c;
+  --border: #3c53ff;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: var(--primary_color);
+ 
+}
+header,
+footer {
+width: 100%;
+padding: 10px 120px 3px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: var(--secondary_color);
+font-size: 160%;
+}
+header {
+  border-bottom: 3px solid var(--border);
+}
+footer {
+  border-top: 3px solid var(--border);
+}
+header nav {
+  width: 20%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 85%;
+}
+
+main {
+  padding: 1%;
+  height: 800px;
+ display: grid;
+ grid-template-columns: 30% 70%;
+ grid-template-rows: repeat(3, auto);
+ grid-template-areas:
+  "about work"
+  "about work"
+  "contact work";
+  gap: 5px;
+  
+}
+#about {
+  grid-area:about;
+}
+#work {
+  grid-area:work;
+}
+#contact {
+  grid-area: contact;
+}
+.page-section {
+  background-color: var(--secondary_color);
+}
+#work {
+  padding: 5px;
+  display: grid;
+  grid-template: repeat(3, auto) / repeat(5, 1fr);
+  grid-template-areas: 
+    "item1 item1 item1 item2 item2"
+    "item3 item3 item4 item4 item4"
+    "item5 item5 item5 item6 item6";
+    gap: 4px;
+}
+#item1 {
+  grid-area: item1;
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+#item2 {
+  grid-area: item2;
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+#item3 {
+  grid-area: item3;
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+#item4 {
+  grid-area: item4;
+  background-image: url(../images/02-run-buddy.jpg);
+}
+#item5 {
+  grid-area: item5;
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+#item6 {
+  grid-area: item6;
+  background-color: orange;
+}
+
+ .page-section a {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end; 
+ }  
+
+.gridcell {
+  width: auto;
+  height: auto;
+}
+
+.page-section h3 {
+  width: 100%;
+  height: 30%;
+  padding: .7em 1.3em;
+  background-color: var(--highlight);
+  color: white;
+}
+.page-section h3:hover {
+  height: 60%;
+  }
+  /* .invis {
+    visibility: hidden;
+    width: 0%;
+  } */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  /* background-color: #fff7008c; */
+}
+
+
