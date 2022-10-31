@@ -73,6 +73,7 @@ main {
 #work {
   padding: 5px;
   display: grid;
+
   grid-template: repeat(3, auto) / repeat(5, 1fr);
   grid-template-areas: 
     "item1 item1 item1 item2 item2"
@@ -106,32 +107,57 @@ main {
 }
 
  .page-section a {
+  /* height: 100%; */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end; 
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 90px);
+  grid-template-areas:
+    "space"
+    "space"
+    "title";
  }  
-
-.gridcell {
-  width: auto;
-  height: auto;
+ .deadspace {
+  grid-area: space;
+ }
+ .proTitle {
+  grid-area: title;
+ }
+ .proText {
+  grid-area: text;
+ }
+.page-section a:hover {
+  grid-template-areas:
+  "title"
+  "text"
+  "text";
+}
+.page-section a:hover p {
+  display:inline
 }
 
+
+
 .page-section h3 {
-  width: 100%;
-  height: 30%;
+  display: inline;
+  /* height: 100%; */
   padding: .7em 1.3em;
+  
   background-color: var(--highlight);
   color: white;
 }
-.page-section h3:hover {
-  height: 60%;
-  }
-  /* .invis {
-    visibility: hidden;
-    width: 0%;
-  } */
+.page-section p {
+  display: none;
+  margin-top: auto;
+  
+  height:max-content; 
+  padding: 10% 1.3em;
+  background-color: var(--highlight);
+  color: white;
+}
+
 
 h1,
 h2,
@@ -169,6 +195,7 @@ p {
 footer {
 width: auto;
 padding: 12px 20px 6px;
+margin-top: 10px;
 
 font-size: 100%;
 }
