@@ -68,7 +68,7 @@ main {
 
 #about {
   
-  height:250px;
+  height: 230px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,13 +79,13 @@ main {
   width: 40%;
 }
 #about #pisa {
-  width: 100%;
-  height: 100%;
+  width: 700px;
+  height: 200px;
   margin-bottom: 3px;
   background-image: url(../images/Pisa.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
 }
 
 .page-section {
@@ -205,23 +205,48 @@ footer {
   font-size: 200%;
 }
 
-
-
-@media only screen and (max-width: 600px) {
-body {
-  height: 130%;
-}
-
+@media only screen and (max-width: 768px) {
   #header h1 {
     width: 46%;
     text-align: center;
   }
+  header nav {
+    width: 40%;
+    /* margin-right: 2em; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 83%;
+  }
+  #about {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+
+    height: 500px;
+    /* align-items: stretch; */
+  }
+  /* #abouttext {
+    /* width: 50%; */
+  /* }  */
+  #about #pisa {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* #header h1 {
+    width: 46%;
+    text-align: center;
+  } */
   #header nav {
     display: flex;
     flex-direction: column;
     width: 30%;
     margin: 0;
   }
+  
   #about {
     display: flex;
     flex-direction: column;
@@ -271,3 +296,4 @@ header h1 {
   font-size: 120%;
 }
 }
+
