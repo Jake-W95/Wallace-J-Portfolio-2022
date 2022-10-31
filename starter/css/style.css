@@ -8,7 +8,7 @@
 * {
   
   text-decoration: none;
-  /* color: black; */
+  color: black;
   
 }
 
@@ -29,45 +29,42 @@ padding: 10px 70px 3px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-font-size: 140%;
-color: white;
+/* font-size: 140%; */
+
 }
 header {
+  margin: auto;
   border-bottom: 3px solid var(--border);
   background-image: url(../images/Waves.jpg);
   background-position:10%;
   background-size:cover;
   background-repeat: no-repeat;
 }
-header nav,
+header nav a,
 header h1,
 footer h3,
 footer a {
   background-color: var(--highlight);
-  padding: 4px 2em;
-  
+  padding: 2px 2px;
+  color: white;
 }
 header nav {
   
-  width: 20%;
-  margin-right: 20px;
+  /* width: 20%; */
+  /* margin-right: 5em;
+  margin-left: 5em; */
   display: flex;
   justify-content: space-between;
-  font-size: 85%;
+  /* font-size: 85%; */
 }
-footer {
-  border-top: 3px solid var(--border);
-  background-image: url(../images/Waves.jpg);
-  background-size: cover;
-
-  background-position: bottom;
+header nav a {
+  margin: 1em;
 }
-
 
 main {
   padding: 1%;
   height: 100%;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
  display: flex;
  flex-direction: column;
 
@@ -75,12 +72,11 @@ main {
 }
 
 #about {
-  /* grid-area:about; */
-  height:250px;
+  
+  height: 230px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-direction: column; */
   border: var(--border);
   padding: 10px 50px;
 }
@@ -88,20 +84,15 @@ main {
   width: 40%;
 }
 #about #pisa {
-  width: 100%;
-  height: 100%;
+  width: 700px;
+  height: 200px;
   margin-bottom: 3px;
   background-image: url(../images/Pisa.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
 }
-#work {
-  grid-area:work;
-}
-#contact {
-  grid-area: contact;
-}
+
 .page-section {
   background-color: var(--secondary_color);
   margin-bottom: 14px;
@@ -124,7 +115,7 @@ main {
 }
 #item2 {
   grid-area: item2;
-  background-image: url(../images/02-portfolio-2.jpg);
+  background-image: url(../images/Horiseon.jpg);
 }
 #item3 {
   grid-area: item3;
@@ -144,7 +135,6 @@ main {
 }
 
  .page-section a {
-  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -172,29 +162,28 @@ main {
   "text";
 }
 #work a:hover p {
-  display:inline
+  display:inline;
 }
 
 
 
 #work h3 {
   display: inline;
-  /* height: 100%; */
-  padding: .7em 1.3em;
-  
+  padding: 0.3em 1.3em;
   background-color: var(--highlight);
   color: white;
 }
 #work p {
   display: none;
   margin-top: auto;
-  
   height:max-content; 
   padding: 10% 1.3em;
   background-color: var(--highlight);
   color: white;
 }
-
+#contact {
+  padding: 12px 50px;
+}
 
 h1,
 h2,
@@ -210,14 +199,80 @@ p {
   /* background-color: #fff7008c; */
 }
 
+footer {
+  border-top: 3px solid var(--border);
+  /* margin: auto; */
+  
+  justify-content: center;
+  background-image: url(../images/Waves.jpg);
+  background-size: cover;
+  background-position: bottom;
+  font-size: 200%;
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  #header h1 {
+    width: 46%;
+    text-align: center;
+    font-size: large;
+  }
+  header nav {
+    /* width: 30%; */
+    margin: 1em 3em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 83%;
+  }
+  #about {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
 
+    height: 500px;
+    /* align-items: stretch; */
+  }
+  /* #abouttext {
+    /* width: 50%; */
+  /* }  */
+  #about #pisa {
+    width: 80%;
+    height: 80%;
+  }
+}
 
+@media only screen and (max-width: 400px) {
+  /* #header h1 {
+    width: 46%;
+    text-align: center;
+  } */
+  #header nav {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0;
+  }
+  
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+  }
+  #about h2 {
+    width: 100%;
+  }
+  #about #pisa {
+    width: 200px;
+    height: 200px;
+    margin-top: 3px;
+  }
   #work {
+    height: 100%;
     padding: 2px;
     display: grid;
-    grid-template-rows: repeat(5, fr1);
+    grid-template-rows: 150px repeat(5, 90px);
     grid-template-columns: 1fr;
     grid-template-areas: 
       "item1"
@@ -247,3 +302,4 @@ header h1 {
   font-size: 120%;
 }
 }
+
