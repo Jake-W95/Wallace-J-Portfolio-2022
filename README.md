@@ -1,5 +1,5 @@
 # Week_2_Challenge
-##Link to live page: https://jake-w95.github.io/Wallace-J-Portfolio-2022/
+## Link to live page: https://jake-w95.github.io/Wallace-J-Portfolio-2022/
 ## A portfolio of work to be used as evidence of my capabilities for potential employers
 
 - This project was an opportunity to practice and showcase all that I've learned so far during the course
