@@ -6,9 +6,9 @@
 }
 
 * {
-  /* box-sizing: border-box; */
+  
   text-decoration: none;
-  color: black;
+  /* color: black; */
   
 }
 
@@ -17,49 +17,84 @@ body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;
-  /* line-height: 1.5; */
+  
   background-color: var(--primary_color);
  
 }
 header,
 footer {
 width: auto;
-padding: 10px 120px 3px;
+height: 150px;
+padding: 10px 70px 3px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: var(--secondary_color);
-font-size: 160%;
+font-size: 140%;
+color: white;
 }
 header {
   border-bottom: 3px solid var(--border);
+  background-image: url(../images/Waves.jpg);
+  background-position:10%;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
-footer {
-  border-top: 3px solid var(--border);
+header nav,
+header h1,
+footer h3,
+footer a {
+  background-color: var(--highlight);
+  padding: 4px 2em;
+  
 }
 header nav {
+  
   width: 20%;
   margin-right: 20px;
   display: flex;
   justify-content: space-between;
   font-size: 85%;
 }
+footer {
+  border-top: 3px solid var(--border);
+  background-image: url(../images/Waves.jpg);
+  background-size: cover;
+
+  background-position: bottom;
+}
+
 
 main {
   padding: 1%;
-  height: 800px;
- display: grid;
- grid-template-columns: 30% 70%;
- grid-template-rows: repeat(3, auto);
- grid-template-areas:
-  "about work"
-  "about work"
-  "contact work";
-  gap: 5px;
+  height: 100%;
+  margin-bottom: 50px;
+ display: flex;
+ flex-direction: column;
+
   
 }
+
 #about {
-  grid-area:about;
+  /* grid-area:about; */
+  height:250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column; */
+  border: var(--border);
+  padding: 10px 50px;
+}
+#about h2 {
+  width: 40%;
+}
+#about #pisa {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3px;
+  background-image: url(../images/Pisa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #work {
   grid-area:work;
@@ -69,16 +104,18 @@ main {
 }
 .page-section {
   background-color: var(--secondary_color);
+  margin-bottom: 14px;
 }
 #work {
   padding: 5px;
   display: grid;
 
-  grid-template: repeat(3, auto) / repeat(5, 1fr);
+  grid-template: repeat(4, 200px) / repeat(6, 1fr);
   grid-template-areas: 
-    "item1 item1 item1 item2 item2"
-    "item3 item3 item4 item4 item4"
-    "item5 item5 item5 item6 item6";
+    "item1 item1 item1 item1 item1 item1"
+    "item1 item1 item1 item1 item1 item1"
+    "item2 item2 item2 item3 item3 item3"
+    "item4 item4 item5 item5 item6 item6";
     gap: 4px;
 }
 #item1 {
@@ -107,13 +144,13 @@ main {
 }
 
  .page-section a {
-  /* height: 100%; */
+  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(3, 90px);
+  grid-template-rows: repeat(3, fr1);
   grid-template-areas:
     "space"
     "space"
@@ -128,19 +165,19 @@ main {
  .proText {
   grid-area: text;
  }
-.page-section a:hover {
+#work a:hover {
   grid-template-areas:
   "title"
-  "text"
+  "space"
   "text";
 }
-.page-section a:hover p {
+#work a:hover p {
   display:inline
 }
 
 
 
-.page-section h3 {
+#work h3 {
   display: inline;
   /* height: 100%; */
   padding: .7em 1.3em;
@@ -148,7 +185,7 @@ main {
   background-color: var(--highlight);
   color: white;
 }
-.page-section p {
+#work p {
   display: none;
   margin-top: auto;
   
@@ -165,7 +202,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 0px;
 }
 
 p {
