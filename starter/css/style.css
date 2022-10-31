@@ -55,16 +55,6 @@ header nav {
   justify-content: space-between;
   /* font-size: 85%; */
 }
-footer {
-  border-top: 3px solid var(--border);
-  /* margin: auto; */
-  justify-content: center;
-  background-image: url(../images/Waves.jpg);
-  background-size: cover;
-  background-position: bottom;
-  font-size: 200%;
-}
-
 
 main {
   padding: 1%;
@@ -98,9 +88,6 @@ main {
   background-size: contain;
 }
 
-#contact {
-  grid-area: contact;
-}
 .page-section {
   background-color: var(--secondary_color);
   margin-bottom: 14px;
@@ -143,7 +130,6 @@ main {
 }
 
  .page-section a {
-  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -171,29 +157,28 @@ main {
   "text";
 }
 #work a:hover p {
-  display:inline
+  display:inline;
 }
 
 
 
 #work h3 {
   display: inline;
-  /* height: 100%; */
-  padding: .7em 1.3em;
-  
+  padding: 0.3em 1.3em;
   background-color: var(--highlight);
   color: white;
 }
 #work p {
   display: none;
   margin-top: auto;
-  
   height:max-content; 
   padding: 10% 1.3em;
   background-color: var(--highlight);
   color: white;
 }
-
+#contact {
+  padding: 12px 50px;
+}
 
 h1,
 h2,
@@ -209,10 +194,43 @@ p {
   /* background-color: #fff7008c; */
 }
 
+footer {
+  border-top: 3px solid var(--border);
+  /* margin: auto; */
+  
+  justify-content: center;
+  background-image: url(../images/Waves.jpg);
+  background-size: cover;
+  background-position: bottom;
+  font-size: 200%;
+}
+
+
 
 @media only screen and (max-width: 600px) {
-
-
+  #header h1 {
+    width: 46%;
+    text-align: center;
+  }
+  #header nav {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+  }
+  #about h2 {
+    width: 100%;
+  }
+  #about #pisa {
+    width: auto;
+  }
   #work {
     padding: 2px;
     display: grid;
