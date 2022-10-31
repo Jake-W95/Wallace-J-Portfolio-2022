@@ -8,7 +8,7 @@
 * {
   
   text-decoration: none;
-  /* color: black; */
+  color: black;
   
 }
 
@@ -29,8 +29,8 @@ padding: 10px 70px 3px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-font-size: 140%;
-color: white;
+/* font-size: 140%; */
+
 }
 header {
   border-bottom: 3px solid var(--border);
@@ -39,13 +39,13 @@ header {
   background-size:cover;
   background-repeat: no-repeat;
 }
-header nav,
+header nav a,
 header h1,
 footer h3,
 footer a {
   background-color: var(--highlight);
-  padding: 4px 2em;
-  
+  padding: 2px 2px;
+  color: white;
 }
 header nav {
   
@@ -53,14 +53,16 @@ header nav {
   margin-right: 20px;
   display: flex;
   justify-content: space-between;
-  font-size: 85%;
+  /* font-size: 85%; */
 }
 footer {
   border-top: 3px solid var(--border);
+  /* margin: auto; */
+  justify-content: center;
   background-image: url(../images/Waves.jpg);
   background-size: cover;
-
   background-position: bottom;
+  font-size: 200%;
 }
 
 
@@ -75,12 +77,11 @@ main {
 }
 
 #about {
-  /* grid-area:about; */
+  
   height:250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-direction: column; */
   border: var(--border);
   padding: 10px 50px;
 }
@@ -96,9 +97,7 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
 }
-#work {
-  grid-area:work;
-}
+
 #contact {
   grid-area: contact;
 }
@@ -124,7 +123,7 @@ main {
 }
 #item2 {
   grid-area: item2;
-  background-image: url(../images/02-portfolio-2.jpg);
+  background-image: url(../images/Horiseon.jpg);
 }
 #item3 {
   grid-area: item3;
